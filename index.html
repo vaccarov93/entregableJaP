@@ -17,17 +17,7 @@
    html, body{
     height: 100%;
     }
-    body {
-     display: -ms-flexbox;
-      display: flex;
-      -ms-flex-align: center;
-      align-items: center;
-      padding-top: 250px;
-      padding-bottom: 40px;
-      background:url(./img/cover_back.png) no-repeat ;
-      background-size: 1400px 300px;
-    }
-
+    
     .signin {
       width: 100%;
       max-width: 330px;
@@ -40,10 +30,15 @@
 
 
 <body class="text-center">
+  <section class="jumbotron text-center">
+    <div class="m-5">
+      <h1></h1>
+    </div>
+  </section>
   
   <div class="container p-5">
     <hr>
-    <h1>Login</h1><hr>
+    <h1>Login</h1>
     <div >
       <form onsubmit="return false">
         <p><input type="email" name="correo" id="correo"placeholder="Escriba su e-mail"></p>
