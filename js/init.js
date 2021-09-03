@@ -45,5 +45,5 @@ var getJSONData = function(url){
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
   let usuarioMostrar = sessionStorage.getItem('user') // usuarioMostrar contiene a "user" mail almacenado anteriormente en el login
-  document.getElementById("usuario").innerHTML = usuarioMostrar //se agrega usuarioMostrar en el el elemento con id = "usuario" en HTML mediante DOM 
+  document.getElementById("usuario").innerHTML = usuarioMostrar //se agrega usuarioMostrar en el el elemento con id = "usuario" en HTML mediante DOM. 
 });

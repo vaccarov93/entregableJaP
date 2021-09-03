@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function(e){
             alert("Hola!!, parece que te falta poner tu contraseña");
         }
         /*como mail y pwd tienen algún valor entra en el ultimo else y guarda en "user" la porción del mail
-        que esta antes del @*/
+        que esta antes del @ */
         else{ 
             sessionStorage.setItem('user', mailCortado)
             window.location.href = "./home.html";
