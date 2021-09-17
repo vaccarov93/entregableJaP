@@ -13,6 +13,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--estilo ranking-->
 </head>
 
 <body>
@@ -26,14 +27,42 @@
       <a class="py-2 d-none d-md-inline-block" href="" id = "usuario"  > </a> <!--Elemento que se crea para poder mostrar el usuario registrado para poder respetar estilo es que se crea un enlase vacio !-->
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 19/09/2021) y Entrega 4 (Fecha de entrega: 03/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
+  <div>
+    <main role="main">
+      <div class="container mt-5">
+        <div class="text-center p-4">
+          <h2 id="productName"></h2><!--Nombre del auto-->
+          <p class="lead" id="productDescription"></p><!--Descripción-->
+        </div>
+        <hr class="my-3">
+        
+        <dl>
+          <dt>Este artículo cuesta</dt>
+          <dd>
+            <p id="productCurrency"></p>
+          </dd>  
+          <dt>Cantidad de artículos vendidos</dt>
+          <dd>
+            <p id="productSoldCount"></p>
+          </dd>
+          <dt>Este artículo lo puede encontrar dentro de la categoría</dt>
+          <dd>
+            <p id="productCategory"></p>
+          </dd>
+          <dt>Imágenes del artículo</dt>
+          <dd>
+            <div class="row text-center text-lg-left pt-2" id="productImagesGallery">
+            </div>
+          </dd>
+          <dt> Experiencia de otros usuarios:</dt>
+          <p></p>
+          <dd id = "comentarios"></dd>   
+        </dl>
+        <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Volver a productos</a>
+      </div>
+    </main>
   </div>
+  
   <footer class="text-muted">
     <div class="container">
       <p class="float-right">
