@@ -45,8 +45,10 @@ function mostrarContenido() {
         let sold = datos.soldCount;
         if (((minPrice == undefined) || (minPrice != undefined && parseInt(cost) >= minPrice)) &&
             ((maxPrice == undefined) || (maxPrice != undefined && parseInt(cost) <= maxPrice))) {
+
+            //en la la primera linea de agregar se incluye el link que redirige a la información de los productos
             agregar += `
-            <a href="product-info.html" class="list-group-item list-group-item-action">				
+            <a href="product-info.html" class="list-group-item list-group-item-action">			
                 <div class="row">
                     <div class="col-3">
                         <img src="` + imgUrl + `" class="img-thumbnail">;

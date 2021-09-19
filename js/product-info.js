@@ -25,7 +25,6 @@ function agregarEstrella(score) {
             estrellas += `
             <span class="fa fa-star checked"></span> 
             `
-            console.log(star)
             star++;   
         }
         
