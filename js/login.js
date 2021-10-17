@@ -4,25 +4,29 @@
 document.addEventListener("DOMContentLoaded", function(e){
     document.getElementById("btn").addEventListener("click", function(e){
        
-        const mail= document.getElementById("correo");
-        const pwd = document.getElementById("contrasena");
+        let mail= document.getElementById("correo").value;
+        let pwd = document.getElementById("contrasena").value;
+        let mailAgregar = ""
 
-
-
-        if(mail.value === ""){
+        if(mail === ""){
             alert("Hola!!, parece que te falta poner tu mail");
         }
-        else if(pwd.value ===""){
+        else if(pwd === ""){
             alert("Hola!!, parece que te falta poner tu contraseña");
         }
         /*como mail y pwd tienen algún valor entra en el ultimo else y guarda en "user" la porción del mail
         que esta antes del @ */
-        else{ 
-            let corte = mail.value.indexOf('@') //corte guarda la posisión que ocupa "@" en el valor de mail 
-            let mailCortado = mail.value.substring(0, corte) /*substring corta el mail entre la posicion inicial y
-            la posición almacenada en corte, correspondiente al @*/
-            sessionStorage.setItem('user', mailCortado)
-            window.location.href = "./home.html";
+        
+        if(mail.includes("@")){ 
+            let corte = mail.indexOf('@'); //corte guarda la posisión que ocupa "@" en el valor de mail 
+            mailAgregar = mail.substring(0, corte); /*substring corta el mail entre la posicion inicial y la posición almacenada en corte, correspondiente al @*/
+        } 
+        else if(mail !==""){ 
+            mailAgregar = mail;
+        };
+        if(mail !== "" && pwd !== ""){
+        localStorage.setItem('user', mailAgregar)
+        window.location.href = "./home.html"; 
         };
     });
 });

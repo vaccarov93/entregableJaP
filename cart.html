@@ -39,20 +39,116 @@
       <a class="py-2 d-none d-md-inline-block" href="home.html">Inicio</a>
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-      <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-      <a class="py-2 d-none d-md-inline-block" href="" id = "usuario"  > </a> <!--Elemento que se crea para poder mostrar el usuario registrado para poder respetar estilo es que se crea un enlase vacio !-->
+      <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>      
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="usuario" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
+          <a class="dropdown-item" href="cart.html">Mi carrito</a>
+          <a class="dropdown-item" href="index.html" id="sesion">Cerrar sesión</a>
+        </div>
+      </div>
     </div>
   </nav>
   <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 17/10/2021) y Entrega 7 (Fecha de entrega: 14/11/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+
+    <div class="text-center p-4">
+      <h2>Tu Carrito</h2>
+      <p class="lead">Aquí podes ver los artículos que quieres comprar.</p>
     </div>
-  </div>
-  <div id="spinner-wrapper">
+    <div id="artCart">
+    </div>
+    
+
+    <div class="text-center p-4">
+      <h2>Envío</h2>
+    </div>
+    <form>
+		<h4>Dirección</h4>
+		<div class="d-flex w-100 justify-content-between">
+		
+			<div class="col-md-3 mb-3">
+				<label for="zip">Calle *</label>
+				<input type="text" class="form-control" placeholder="" value="" required="">
+			</div>
+		
+			<div class="col-md-2 mb-3">
+				<label for="zip">Número *</label>
+				<input type="text" class="form-control" placeholder="" value="" required="">
+			</div>
+		
+			<div class="col-md-3 mb-3">
+				<label for="zip">Esquina *</label>
+				<input type="text" class="form-control" placeholder="" value="" required="">
+			</div>
+		
+			<div class="col-md-3 mb-3">
+				<label for="zip">País *</label>
+				<input type="text" class="form-control" placeholder="" value="" required="">
+			</div>
+		</div>
+		<p>(*) Los campos son obligatorios</p>
+		<p></p>
+
+    <h4 class="mb-3">Tipo de envío </h4>
+		<div class="d-block my-3">
+			<div class="custom-control custom-radio">
+				<input id="estandarradio" name="shippingType" type="radio" class="custom-control-input" required="">
+				<label class="custom-control-label" for="estandarradio">Estándar (12 a 15 días) - 5% sobre subtotal</label>
+			</div>
+
+			<div class="custom-control custom-radio">
+				<input id="expressradio" name="shippingType" type="radio" class="custom-control-input" required="">
+				<label class="custom-control-label" for="expressradio">Express (5 a 8 días) - 7% sobre el subtotal</label>
+			</div>
+
+			<div class="custom-control custom-radio">
+				<input id="premiumradio" name="shippingType" type="radio" class="custom-control-input" required="">
+				<label class="custom-control-label" for="premiumradio">Premium (2 a 5 días) - 15% sobre el subtotal</label>
+			</div>
+
+		</div>
+		<hr>
+			<h4 class="mb-3">Costos</h4>
+              <ul class="list-group mb-3">
+                  <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                      <h6 class="my-0">Subtotal</h6>
+                      <small class="text-muted">Costo unitario x cantidad de items</small>
+                    </div>
+                    <span class="text-muted" id="articleCostText">-</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                      <h6 class="my-0">Costo de envío</h6>
+                      <small class="text-muted">Según el tipo de envío seleccionado</small>
+                    </div>
+                    <span class="text-muted" id="shipCostText">-</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                    <span><strong>Total</strong></span>
+                    <strong id="totalArticleCostText">-</strong>
+                  </li>
+                </ul>
+
+			<hr>
+			<div class="d-block my-3">
+				<h4 class="mb-3">Método de pago</h4>
+				<div class="custom-control custom-radio">
+					<input id="creditradio" name="payType" type="radio" class="custom-control-input" required="">
+					<label class="custom-control-label" for="creditradio">Tarjeta de crédito</label>
+				</div>
+				<div class="custom-control custom-radio">
+					<input id="debitoradio" name="payType" type="radio" class="custom-control-input" required="">
+					<label class="custom-control-label" for="debitoradio">Débito</label>
+				</div>
+			</div>
+		
+		<button class="btn btn-primary btn-lg" id="buyBtn" type="submit">Comprar</button>
+	</form>
+      
+    <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
       <div></div>
@@ -66,5 +162,4 @@
   <script src="js/init.js"></script>
   <script src="js/cart.js"></script>
 </body>
-
 </html>
