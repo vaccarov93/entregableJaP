@@ -56,22 +56,22 @@ document.addEventListener("DOMContentLoaded", function(e){
         
         updateTotalCosts();
     
-        document.getElementById("prodCount").addEventListener("change", function(){
+        document.getElementById("prodCount").addEventListener("click", function(){
             prodCount = this.value;
             updateTotalCosts();
         });
     });
-    document.getElementById("estandarradio").addEventListener("change", function(){
+    document.getElementById("estandarradio").addEventListener("click", function(){
         shipComissionPercentage = 0.05;
         updateTotalCosts();
     });
     
-    document.getElementById("expressradio").addEventListener("change", function(){
+    document.getElementById("expressradio").addEventListener("click", function(){
         shipComissionPercentage = 0.07;
         updateTotalCosts();
     });
 
-    document.getElementById("premiumradio").addEventListener("change", function(){
+    document.getElementById("premiumradio").addEventListener("click", function(){
         shipComissionPercentage = 0.13;
         updateTotalCosts();
     });
