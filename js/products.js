@@ -48,7 +48,7 @@ function mostrarContenido() {
 
 			//en la la primera linea de agregar se incluye el link que redirige a la información de los productos
 			agregar += `
-				<div class="col-md-4">
+				<div class="col-md-6">
 					<a href="product-info.html" class="card mb-4 shadow-sm custom-card">
 						<img class="bd-placeholder-img card-img-top" src="` + imgUrl + `">
 						<h3 class="m-3">`+ name + `</h3>

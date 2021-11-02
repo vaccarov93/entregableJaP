@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function(e){
   document.getElementById("usuario").innerHTML = usuarioMostrar //se agrega usuarioMostrar en el el elemento con id = "usuario" en HTML mediante DOM. 
   
   document.getElementById("sesion").addEventListener("click", function(){
-    localStorage.removeItem('user')
+    localStorage.clear()
     window.location.href = "./index.html"
     
   }); 
