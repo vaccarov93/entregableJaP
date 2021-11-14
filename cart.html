@@ -62,94 +62,134 @@
     
 
     <div class="text-center p-4">
-      <h2>Envío</h2>
+      <h2>Datos de Envio</h2>
     </div>
     <form>
-		<h4>Dirección</h4>
-		<div class="d-flex w-100 justify-content-between">
-		
-			<div class="col-md-3 mb-3">
-				<label for="zip">Calle *</label>
-				<input type="text" class="form-control" placeholder="" value="" required="">
-			</div>
-		
-			<div class="col-md-2 mb-3">
-				<label for="zip">Número *</label>
-				<input type="text" class="form-control" placeholder="" value="" required="">
-			</div>
-		
-			<div class="col-md-3 mb-3">
-				<label for="zip">Esquina *</label>
-				<input type="text" class="form-control" placeholder="" value="" required="">
-			</div>
-		
-			<div class="col-md-3 mb-3">
-				<label for="zip">País *</label>
-				<input type="text" class="form-control" placeholder="" value="" required="">
-			</div>
-		</div>
-		<p>(*) Los campos son obligatorios</p>
-		<p></p>
-
-    <h4 class="mb-3">Tipo de envío </h4>
-		<div class="d-block my-3">
-			<div class="custom-control custom-radio">
-				<input id="estandarradio" name="shippingType" type="radio" class="custom-control-input" required="">
-				<label class="custom-control-label" for="estandarradio">Estándar (12 a 15 días) - 5% sobre subtotal</label>
-			</div>
-
-			<div class="custom-control custom-radio">
-				<input id="expressradio" name="shippingType" type="radio" class="custom-control-input" required="">
-				<label class="custom-control-label" for="expressradio">Express (5 a 8 días) - 7% sobre el subtotal</label>
-			</div>
-
-			<div class="custom-control custom-radio">
-				<input id="premiumradio" name="shippingType" type="radio" class="custom-control-input" required="">
-				<label class="custom-control-label" for="premiumradio">Premium (2 a 5 días) - 15% sobre el subtotal</label>
-			</div>
-
-		</div>
-		<hr>
-			<h2 class="mb-3 text-center p-4">Costos</h2>
-              <ul class="list-group mb-3">
-                  <li class="list-group-item d-flex justify-content-between lh-condensed">
-                    <div>
-                      <h6 class="my-0">Subtotal</h6>
-                      <small class="text-muted">Costo unitario x cantidad de items</small>
-                    </div>
-                    <span class="text-muted" id="articleCostText">-</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between lh-condensed">
-                    <div>
-                      <h6 class="my-0">Costo de envío</h6>
-                      <small class="text-muted">Según el tipo de envío seleccionado</small>
-                    </div>
-                    <span class="text-muted" id="shipCostText">-</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between">
-                    <span><strong>Total</strong></span>
-                    <strong id="totalArticleCostText">-</strong>
-                  </li>
-                </ul>
-
-			<hr>
-			<div class="d-block my-3">
-				<h4 class="mb-3">Método de pago</h4>
-				<div class="custom-control custom-radio">
-					<input id="creditradio" name="payType" type="radio" class="custom-control-input" required="">
-					<label class="custom-control-label" for="creditradio">Tarjeta de crédito</label>
-				</div>
-				<div class="custom-control custom-radio">
-					<input id="debitoradio" name="payType" type="radio" class="custom-control-input" required="">
-					<label class="custom-control-label" for="debitoradio">Débito</label>
-				</div>
-			</div>
-
-      <div class="text-center">
-        <button class="btn btn-primary btn-lg center" id="buyBtn" type="submit">Comprar</button>
+      <h4>Dirección</h4>
+      <div class="d-flex w-100 justify-content-between">
+    
+        <div class="col-md-3 mb-3">
+          <label for="zip">Calle *</label>
+          <input id = "calle" type="text" class="form-control" placeholder="" value="" required="">
+        </div>
+    
+        <div class="col-md-2 mb-3">
+          <label for="zip">Número *</label>
+          <input id = "numC" type="text" class="form-control" placeholder="" value="" required="">
+        </div>
+    
+        <div class="col-md-3 mb-3">
+          <label for="zip">Esquina *</label>
+          <input id = "esq" type="text" class="form-control" placeholder="" value="" required="">
+        </div>
+    
+        <div class="col-md-3 mb-3">
+          <label for="zip">País *</label>
+          <select id = "pais" class="form-control" required="">
+            <option disabled selected value="Seleccione Pais">Seleccione Pais</option> 
+          </select>
+        </div>
       </div>
-	</form>
-      
+      <p>(*) Los campos son obligatorios</p>
+      <p></p>
+    
+      <h4 class="mb-3">Tipo de envío </h4>
+      <div class="d-block my-3">
+        <div class="custom-control custom-radio">
+          <input id="estandarradio" name="shippingType" type="radio" class="custom-control-input" required="">
+          <label class="custom-control-label" for="estandarradio">Estándar (12 a 15 días) - 5% sobre subtotal</label>
+        </div>
+    
+        <div class="custom-control custom-radio">
+          <input id="expressradio" name="shippingType" type="radio" class="custom-control-input" required="">
+          <label class="custom-control-label" for="expressradio">Express (5 a 8 días) - 7% sobre el subtotal</label>
+        </div>
+    
+        <div class="custom-control custom-radio">
+          <input id="premiumradio" name="shippingType" type="radio" class="custom-control-input" required="">
+          <label class="custom-control-label" for="premiumradio">Premium (2 a 5 días) - 15% sobre el subtotal</label>
+        </div>
+    
+      </div>
+      <hr>
+      <h2 class="mb-3 text-center p-4">Costos</h2>
+      <ul class="list-group mb-3">
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Subtotal</h6>
+            <small class="text-muted">Costo unitario x cantidad de items</small>
+          </div>
+          <span class="text-muted" name="articleCostText">-</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Costo de envío</h6>
+            <small class="text-muted">Según el tipo de envío seleccionado</small>
+          </div>
+          <span class="text-muted" id="shipCostText">-</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          <span><strong>Total</strong></span>
+          <strong id="totalArticleCostText">-</strong>
+        </li>
+      </ul>
+      <br>
+      <br>
+
+    
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary center" data-toggle="modal" data-target="#exampleModal">
+        Método de pago
+      </button>
+      <div id="pagoSeleccionado"  class="my-3"></div>
+    
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Método de Pago</h5> 
+            </div>
+            <div class="modal-body">
+              
+              <input id="creditradio" name="payType" type="radio">
+              <label for="creditradio">Tarjeta de crédito</label>
+              <br>
+              <br> 
+              <div>              
+                <input type="text" id="numCard"class="creditCard" placeholder="Número de tarjeta" value = "" disabled="">
+                <input type="text" id="cvv" class= "col-2 creditCard" placeholder="CVV" value = "" disabled="">
+                <br>
+                <br>
+                <input type="text" id="venc" class="creditCard" placeholder="Vencimiento (mm/aa)" value = "" disabled="">
+              </div>
+              <br>
+              <div>
+                <input id="radioBank" name="payType" type="radio" >
+                <label for="radioBank">Transferencia bancaria</label>
+                <br>
+                <br>
+                <input type="text" id="bankTransfer" placeholder="Número de cuenta" disabled="">             
+              </div>
+            
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+              <!--<button type="submit" class="btn btn-primary">Save changes</button>-->
+            </div>
+          </div>
+        </div>
+      </div>    
+    </form>
+    <br>
+    <br>
+    <br>
+    <div class="text-center">
+      <button class="btn btn-primary btn-lg center" id="buyBtn" type="submit">Comprar</button>
+    </div>
+    <div  id="error"></div>
+    
+
     <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
